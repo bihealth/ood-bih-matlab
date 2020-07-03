@@ -23,9 +23,5 @@ cd "${HOME}"
 # Start MATLAB
 #
 
-BINDS=/fast
-MATLAB_IMAGE=/fast/projects/cubit/ood/matlab-2020a.sif
-
-singularity run --no-home -B "$BINDS" \
-  "$MATLAB_IMAGE" \
-  /opt/MATLAB/R2020a/bin/matlab -desktop
+/opt/MATLAB/R2020a/bin/matlab -desktop
+sleep infinity
