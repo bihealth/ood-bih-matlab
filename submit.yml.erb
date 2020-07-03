@@ -6,6 +6,17 @@
 ---
 batch_connect:
   template: vnc
+  script_wrapper: |
+    set -x
+    cat << "EOF" >container.sh
+    set -x
+    %s
+    EOF
+    echo "==="
+    cat container.sh
+    echo "==="
+    export SINGULARITY_BINDPATH="/fast"
+    singularity run /fast/projects/cubit/ood/matlab-2020a.sif container.sh
 script:
   native:
     - "--cpus-per-task"

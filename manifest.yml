@@ -1,0 +1,8 @@
+---
+name: MATLAB
+category: Interactive Apps
+subcategory: IDEs
+role: batch_connect
+description: |
+  This app will launch MATLAB on the BIH cluser.
+
