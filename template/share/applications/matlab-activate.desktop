@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Activate MATLAB 2020a
+Comment=Re-activate MATLAB 2020a
+Exec=/opt/MATLAB/R2020a/bin/activate_matlab.sh
+Path=/opt/MATLAB/R2020a/bin
+Terminal=false
+Categories=Software Development;
+StartupNotify=true

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=MATLAB 2020a
+Comment=MATLAB 2020a
+Exec=/opt/MATLAB/R2020a/bin/matlab
+Path=/opt/MATLAB/R2020a/bin
+Icon=/opt/MATLAB/icon.png
+Terminal=false
+Categories=Software Development;
+StartupNotify=true
