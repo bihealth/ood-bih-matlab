@@ -10,19 +10,21 @@ batch_connect:
     set -x
     cat << "EOF" >container.sh
     set -x
+    set -e
     %s
     EOF
+    chmod +x container.sh
     echo "==="
     cat container.sh
     echo "==="
-    export SINGULARITY_BINDPATH="/fast"
-    singularity run /fast/projects/cubit/ood/matlab-2020a.sif container.sh
+    export SINGULARITY_BINDPATH="/fast,/data/gpfs-1,/opt/ood,/srv,/var,/run/user/$(id -u)"
+    singularity run /data/gpfs-1/projects/cubit/ood/matlab-2020a.sif $PWD/container.sh
 script:
   native:
     - "--cpus-per-task"
     - "<%= cpus %>"
     - "--mem"
-    - "<%= mem %>"
+    - "<%= mem * 1024 %>"
     - "--partition"
     - "<%= bih_partition %>"
     - "--time"
