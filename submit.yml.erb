@@ -17,8 +17,8 @@ batch_connect:
     echo "==="
     cat container.sh
     echo "==="
-    export SINGULARITY_BINDPATH="/fast,/data/gpfs-1,/opt/ood,/srv,/var,/run/user/$(id -u)"
-    singularity run /data/gpfs-1/projects/cubit/ood/matlab-2020a.sif $PWD/container.sh
+    export SINGULARITY_BINDPATH="/fast,/data/gpfs-1,/data/cephfs-1,/data/cephfs-2,/opt/ood,/srv,/var,/run/user/$(id -u)"
+    singularity run /data/cephfs-1/work/projects/cubit/ood/matlab-2020a.sif $PWD/container.sh
 script:
   native:
     - "--cpus-per-task"
